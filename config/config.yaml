@@ -1,0 +1,15 @@
+data_source:
+  type: csv
+  path: data/raw/train.csv
+
+target_column: "SalePrice"
+
+model_params:
+  model_type: RandomForest
+  params:
+    n_estimators: 100
+    max_depth: 5
+
+mlflow_config:
+  experiment_name: "HousePricePrediction_Model"
+  tracking_uri: "file:./experiments/mlruns"
